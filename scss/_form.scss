@@ -1,0 +1,64 @@
+@mixin inputsForm () {
+    border-radius: 5px;
+    outline: none;
+    border: solid 1px $color-titulo;
+    padding: 5px 10px;
+    margin: 10px auto;
+    width: 250px;
+}
+
+form {
+    font-size: 20px;
+    border-radius: 7px;
+    margin: 0 auto;
+    width: 300px;
+    padding: 10px;
+
+    .Nombre {
+        @extend .Nombre;
+        border-radius: 5px;
+        outline: none;
+        border: solid 1px $color-titulo;
+        padding: 5px 10px;
+        margin: 10px auto;
+        width: 250px;
+    }
+
+    .Email {
+        @include inputsForm($color-titulo);
+        background-color:black;
+    }
+
+    .selector {
+        border-radius: 5px;
+        display: block;
+        padding: 5px 10px;
+        margin: 10px auto;
+        margin-right: 200px;
+        width: 250px;
+        height: 34px;
+
+        #areatext {
+            border-radius: 5px;
+
+            .enviar {
+                background-color: darkgray;
+                display: inline-block;
+                border-radius: 10%;
+                border: none;
+                outline: none;
+                width: 80px;
+
+                .restablecer {
+                    background-color: darkgrey;
+                    display: inline-block;
+                    border-radius: 10%;
+                    border: none;
+                    outline: none;
+                    width: 150px;
+
+                }
+            }
+        }
+    }
+}
